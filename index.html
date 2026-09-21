@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Rejka — Portfolio</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(139, 92, 246, 0.18), transparent 30%),
+        radial-gradient(circle at 85% 20%, rgba(59, 130, 246, 0.15), transparent 30%),
+        #050509;
+      color: #f5f5f5;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.045);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, #a78bfa, #60a5fa);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .glow {
+      box-shadow:
+        0 0 80px rgba(139, 92, 246, 0.12),
+        0 0 30px rgba(59, 130, 246, 0.08);
+    }
+
+    .timeline-line {
+      position: absolute;
+      left: 7px;
+      top: 8px;
+      bottom: 8px;
+      width: 1px;
+      background: rgba(255,255,255,0.12);
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 15px;
+      height: 15px;
+      border-radius: 999px;
+      background: #8b5cf6;
+      box-shadow: 0 0 20px rgba(139,92,246,0.6);
+    }
+  </style>
+</head>
+
+<body class="grid-bg">
+
+  <!-- Navigation -->
+  <nav class="fixed top-4 left-1/2 -translate-x-1/2 z-50
+              w-[calc(100%-2rem)] max-w-6xl glass rounded-2xl px-4 py-3">
+
+    <div class="flex items-center justify-between gap-4">
+
+      <a href="#home" class="font-bold tracking-tight">
+        MRP
+      </a>
+
+      <div class="hidden md:flex items-center gap-6 text-sm text-gray-300">
+
+        <a href="#about" class="hover:text-white transition">
+          <span data-en="About" data-id="Tentang Saya">About</span>
+        </a>
+
+        <a href="#skills" class="hover:text-white transition">
+          <span data-en="Skills" data-id="Keahlian">Skills</span>
+        </a>
+
+        <a href="#experience" class="hover:text-white transition">
+          <span data-en="Experience" data-id="Pengalaman">Experience</span>
+        </a>
+
+        <a href="#education" class="hover:text-white transition">
+          <span data-en="Education" data-id="Pendidikan">Education</span>
+        </a>
+
+        <a href="#creative" class="hover:text-white transition">
+          <span data-en="Writing" data-id="Tulisan">Writing</span>
+        </a>
+
+        <a href="#contact" class="hover:text-white transition">
+          <span data-en="Contact" data-id="Kontak">Contact</span>
+        </a>
+
+      </div>
+
+      <button
+        id="languageToggle"
+        class="text-xs font-semibold px-3 py-2 rounded-xl bg-white/10 hover:bg-white/15 transition"
+      >
+        ID
+      </button>
+
+    </div>
+  </nav>
+
+
+  <!-- Hero -->
+  <section id="home" class="min-h-screen flex items-center px-6 pt-24">
+
+    <div class="max-w-6xl mx-auto w-full">
+
+      <div class="max-w-4xl">
+
+        <p
+          data-en="Developer • Mentor • Practical Worker"
+          data-id="Developer • Mentor • Pekerja Praktis"
+          class="text-sm md:text-base text-gray-400 mb-5"
+        >
+          Developer • Mentor • Practical Worker
+        </p>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-tight">
+          <span class="gradient-text">Muhammad</span>
+          Rejka
+          <span class="gradient-text">Permana</span>
+        </h1>
+
+        <p
+          data-en="A practical and adaptable person with experience across technical, educational, and hands-on working environments."
+          data-id="Pribadi yang praktis dan adaptif dengan pengalaman di lingkungan kerja teknis, pendidikan, maupun pekerjaan langsung."
+          class="mt-7 max-w-2xl text-gray-400 text-lg leading-relaxed"
+        >
+          A practical and adaptable person with experience across technical,
+          educational, and hands-on working environments.
+        </p>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+
+          <a
+            href="https://wa.me/6285111602709"
+            class="glass px-5 py-3 rounded-xl hover:bg-white/10 transition text-sm font-semibold"
+          >
+            WhatsApp
+          </a>
+
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=rejkamuhammad@gmail.com&su=Hello%20Muhammad%20Rejka%20Permana"
+            class="glass px-5 py-3 rounded-xl hover:bg-white/10 transition text-sm font-semibold"
+          >
+            Email
+          </a>
+
+          <a
+            href="https://github.com/jusondac"
+            target="_blank"
+            class="glass px-5 py-3 rounded-xl hover:bg-white/10 transition text-sm font-semibold"
+          >
+            GitHub
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- About -->
+  <section id="about" class="px-6 py-24">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="glass glow rounded-3xl p-7 md:p-10">
+
+        <p
+          data-en="ABOUT ME"
+          data-id="TENTANG SAYA"
+          class="text-sm text-violet-400 font-semibold mb-3"
+        >
+          ABOUT ME
+        </p>
+
+        <h2
+          data-en="Practical, adaptable, and organized."
+          data-id="Praktis, adaptif, dan terorganisir."
+          class="text-3xl md:text-4xl font-bold mb-6"
+        >
+          Practical, adaptable, and organized.
+        </h2>
+
+        <p
+          data-en="I am a hardworking and adaptable person with experience working in both indoor and outdoor environments. I value cleanliness, organization, and doing things carefully and properly. I am comfortable learning new tasks, working with others, and adapting to different working environments. My experience has taught me to be dependable, attentive to details, and willing to take responsibility for the work in front of me."
+          data-id="Saya adalah pribadi yang pekerja keras dan adaptif dengan pengalaman bekerja di lingkungan indoor maupun outdoor. Saya menghargai kebersihan, kerapihan, dan menyelesaikan pekerjaan dengan teliti dan baik. Saya terbiasa mempelajari tugas baru, bekerja bersama orang lain, serta beradaptasi dengan berbagai lingkungan kerja. Pengalaman yang saya miliki mengajarkan saya untuk dapat diandalkan, memperhatikan detail, dan bertanggung jawab terhadap pekerjaan yang diberikan."
+          class="text-gray-400 leading-relaxed max-w-3xl"
+        >
+          I am a hardworking and adaptable person with experience working in both
+          indoor and outdoor environments. I value cleanliness, organization, and
+          doing things carefully and properly. I am comfortable learning new tasks,
+          working with others, and adapting to different working environments. My
+          experience has taught me to be dependable, attentive to details, and
+          willing to take responsibility for the work in front of me.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Skills -->
+  <section id="skills" class="px-6 py-24">
+
+    <div class="max-w-6xl mx-auto">
+
+      <p
+        data-en="SKILLS"
+        data-id="KEAHLIAN"
+        class="text-sm text-violet-400 font-semibold mb-3"
+      >
+        SKILLS
+      </p>
+
+      <h2
+        data-en="What I can bring"
+        data-id="Yang dapat saya berikan"
+        class="text-3xl md:text-4xl font-bold mb-10"
+      >
+        What I can bring
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        <div class="glass rounded-2xl p-6">
+          <h3
+            data-en="Adaptability"
+            data-id="Adaptasi"
+            class="font-semibold"
+          >
+            Adaptability
+          </h3>
+          <p
+            data-en="Comfortable learning and adjusting to different environments."
+            data-id="Mampu belajar dan menyesuaikan diri dengan berbagai lingkungan."
+            class="text-sm text-gray-500 mt-2"
+          >
+            Comfortable learning and adjusting to different environments.
+          </p>
+        </div>
+
+
+        <div class="glass rounded-2xl p-6">
+          <h3
+            data-en="Organization"
+            data-id="Kerapihan & Organisasi"
+            class="font-semibold"
+          >
+            Organization
+          </h3>
+          <p
+            data-en="Careful and organized when arranging tasks, tools, and materials."
+            data-id="Teliti dan teratur dalam menyusun pekerjaan, alat, dan barang."
+            class="text-sm text-gray-500 mt-2"
+          >
+            Careful and organized when arranging tasks, tools, and materials.
+          </p>
+        </div>
+
+
+        <div class="glass rounded-2xl p-6">
+          <h3
+            data-en="Cleanliness"
+            data-id="Kebersihan"
+            class="font-semibold"
+          >
+            Cleanliness
+          </h3>
+          <p
+            data-en="Maintains clean and orderly working environments."
+            data-id="Menjaga lingkungan kerja tetap bersih dan teratur."
+            class="text-sm text-gray-500 mt-2"
+          >
+            Maintains clean and orderly working environments.
+          </p>
+        </div>
+
+
+        <div class="glass rounded-2xl p-6">
+          <h3
+            data-en="Physical Endurance"
+            data-id="Ketahanan Fisik"
+            class="font-semibold"
+          >
+            Physical Endurance
+          </h3>
+          <p
+            data-en="Experienced with practical indoor and outdoor work."
+            data-id="Berpengalaman dalam pekerjaan praktis indoor maupun outdoor."
+            class="text-sm text-gray-500 mt-2"
+          >
+            Experienced with practical indoor and outdoor work.
+          </p>
+        </div>
+
+
+        <div class="glass rounded-2xl p-6">
+          <h3
+            data-en="Problem Solving"
+            data-id="Pemecahan Masalah"
+            class="font-semibold"
+          >
+            Problem Solving
+          </h3>
+          <p
+            data-en="Able to understand situations and work through practical problems."
+            data-id="Mampu memahami situasi dan menyelesaikan masalah secara praktis."
+            class="text-sm text-gray-500 mt-2"
+          >
+            Able to understand situations and work through practical problems.
+          </p>
+        </div>
+
+
+        <div class="glass rounded-2xl p-6">
+          <h3
+            data-en="Learning Ability"
+            data-id="Kemampuan Belajar"
+            class="font-semibold"
+          >
+            Learning Ability
+          </h3>
+          <p
+            data-en="Quick to learn new tasks, processes, and responsibilities."
+            data-id="Cepat mempelajari tugas, proses, dan tanggung jawab baru."
+            class="text-sm text-gray-500 mt-2"
+          >
+            Quick to learn new tasks, processes, and responsibilities.
+          </p>
+        </div>
+
+
+        <div class="glass rounded-2xl p-6">
+          <h3
+            data-en="Communication"
+            data-id="Komunikasi"
+            class="font-semibold"
+          >
+            Communication
+          </h3>
+          <p
+            data-en="Comfortable communicating and working with other people."
+            data-id="Mampu berkomunikasi dan bekerja bersama orang lain."
+            class="text-sm text-gray-500 mt-2"
+          >
+            Comfortable communicating and working with other people.
+          </p>
+        </div>
+
+
+        <div class="glass rounded-2xl p-6">
+          <h3
+            data-en="Technical Knowledge"
+            data-id="Pengetahuan Teknis"
+            class="font-semibold"
+          >
+            Technical Knowledge
+          </h3>
+          <p
+            data-en="Background in computing and technical work."
+            data-id="Memiliki latar belakang dalam ilmu komputer dan pekerjaan teknis."
+            class="text-sm text-gray-500 mt-2"
+          >
+            Background in computing and technical work.
+          </p>
+        </div>
+
+
+        <div class="glass rounded-2xl p-6">
+          <h3
+            data-en="Basic Cooking"
+            data-id="Dasar Memasak"
+            class="font-semibold"
+          >
+            Basic Cooking
+          </h3>
+          <p
+            data-en="Practical experience with kitchen preparation and food processing."
+            data-id="Memiliki pengalaman praktis dalam persiapan dan pengolahan makanan."
+            class="text-sm text-gray-500 mt-2"
+          >
+            Practical experience with kitchen preparation and food processing.
+          </p>
+        </div>
+
+
+        <!-- English -->
+        <div class="glass rounded-2xl p-6">
+          <h3
+            data-en="English"
+            data-id="Bahasa Inggris"
+            class="font-semibold"
+          >
+            English
+          </h3>
+          <p
+            data-en="Speaking, reading, and writing."
+            data-id="Berbicara, membaca, dan menulis."
+            class="text-sm text-gray-500 mt-2"
+          >
+            Speaking, reading, and writing.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Experience -->
+  <section id="experience" class="px-6 py-24">
+
+    <div class="max-w-5xl mx-auto">
+
+      <p
+        data-en="EXPERIENCE"
+        data-id="PENGALAMAN"
+        class="text-sm text-violet-400 font-semibold mb-3"
+      >
+        EXPERIENCE
+      </p>
+
+      <h2
+        data-en="Experience & Work"
+        data-id="Pengalaman Kerja"
+        class="text-3xl md:text-4xl font-bold mb-12"
+      >
+        Experience & Work
+      </h2>
+
+      <div class="relative">
+
+        <div class="timeline-line"></div>
+
+<!-- Freelance Market -->
+        <div class="relative pl-10 mb-12">
+
+          <div class="timeline-dot"></div>
+
+          <div class="glass rounded-2xl p-6">
+
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+
+              <div>
+                <h3
+                  data-en="Freelance Market Worker"
+                  data-id="Pekerja Lepas Pasar"
+                  class="text-xl font-bold"
+                >
+                  Freelance Market Worker
+                </h3>
+
+                <p
+                  data-en="Freelance"
+                  data-id="Pekerja Lepas"
+                  class="text-violet-400 text-sm mt-1"
+                >
+                  Freelance
+                </p>
+              </div>
+
+              <span class="text-sm text-gray-500">
+                2024–2026
+              </span>
+
+            </div>
+
+            <ul class="mt-5 space-y-2 text-gray-400 text-sm leading-relaxed">
+
+              <li
+                data-en="• Served customers and supported daily operations."
+                data-id="• Melayani pelanggan dan membantu operasional sehari-hari."
+              >
+                • Served customers and supported daily operations.
+              </li>
+
+              <li
+                data-en="• Maintained cleanliness of the work area."
+                data-id="• Menjaga kebersihan area kerja."
+              >
+                • Maintained cleanliness of the work area.
+              </li>
+
+              <li
+                data-en="• Arranged and organized merchandise."
+                data-id="• Menyusun dan menata barang dagangan."
+              >
+                • Arranged and organized merchandise.
+              </li>
+
+              <li
+                data-en="• Assisted with loading and unloading goods."
+                data-id="• Membantu menaikkan dan menurunkan barang."
+              >
+                • Assisted with loading and unloading goods.
+              </li>
+
+              <li
+                data-en="• Maintained electrical utilities."
+                data-id="• Memelihara utilitas listrik."
+              >
+                • Maintained electrical utilities.
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+        <!-- Freelance Kitchen -->
+        <div class="relative pl-10 mb-12">
+
+          <div class="timeline-dot"></div>
+
+          <div class="glass rounded-2xl p-6">
+
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+
+              <div>
+                <h3
+                  data-en="Freelance Kitchen Worker"
+                  data-id="Pekerja Lepas Dapur"
+                  class="text-xl font-bold"
+                >
+                  Freelance Kitchen Worker
+                </h3>
+
+                <p
+                  data-en="Freelance"
+                  data-id="Pekerja Lepas"
+                  class="text-violet-400 text-sm mt-1"
+                >
+                  Freelance
+                </p>
+              </div>
+
+              <span class="text-sm text-gray-500">
+                2025–2026
+              </span>
+
+            </div>
+
+            <ul class="mt-5 space-y-2 text-gray-400 text-sm leading-relaxed">
+
+              <li
+                data-en="• Checked ingredient availability."
+                data-id="• Mengecek ketersediaan bahan."
+              >
+                • Checked ingredient availability.
+              </li>
+
+              <li
+                data-en="• Prepared seasonings for recipes."
+                data-id="• Meracik bumbu untuk setiap resep."
+              >
+                • Prepared seasonings for recipes.
+              </li>
+
+              <li
+                data-en="• Maintained kitchen cleanliness."
+                data-id="• Menjaga kebersihan dapur."
+              >
+                • Maintained kitchen cleanliness.
+              </li>
+
+              <li
+                data-en="• Maintained kitchen equipment."
+                data-id="• Memelihara peralatan dapur."
+              >
+                • Maintained kitchen equipment.
+              </li>
+
+              <li
+                data-en="• Processed cooking ingredients until ready to serve."
+                data-id="• Memproses bahan masakan hingga siap disajikan."
+              >
+                • Processed cooking ingredients until ready to serve.
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- University -->
+        <div class="relative pl-10 mb-12">
+
+          <div class="timeline-dot"></div>
+
+          <div class="glass rounded-2xl p-6">
+
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+
+              <div>
+
+                <h3
+                  data-en="University of Pasundan"
+                  data-id="Universitas Pasundan"
+                  class="text-xl font-bold"
+                >
+                  University of Pasundan
+                </h3>
+
+                <p
+                  data-en="Laboratory Assistant · Bandung, Indonesia"
+                  data-id="Asisten Laboratorium · Bandung, Indonesia"
+                  class="text-violet-400 text-sm mt-1"
+                >
+                  Laboratory Assistant · Bandung, Indonesia
+                </p>
+
+              </div>
+
+              <span class="text-sm text-gray-500">
+                Sep 2023 – Jan 2024
+              </span>
+
+            </div>
+
+            <ul class="mt-5 space-y-2 text-gray-400 text-sm leading-relaxed">
+
+              <li
+                data-en="• Taught SQL and Networking to 50+ students, increasing class engagement by 40%."
+                data-id="• Mengajar SQL dan Networking kepada 50+ mahasiswa, meningkatkan keterlibatan kelas sebesar 40%."
+              >
+                • Taught SQL and Networking to 50+ students, increasing class engagement by 40%.
+              </li>
+
+              <li
+                data-en="• Created hands-on lab exercises that improved technical assessment scores by 30%."
+                data-id="• Membuat latihan praktikum yang meningkatkan nilai asesmen kemampuan teknis sebesar 30%."
+              >
+                • Created hands-on lab exercises that improved technical assessment scores by 30%.
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+
+        <!-- Progate -->
+        <div class="relative pl-10 mb-12">
+
+          <div class="timeline-dot"></div>
+
+          <div class="glass rounded-2xl p-6">
+
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+
+              <div>
+
+                <h3
+                  data-en="Progate Indonesia"
+                  data-id="Progate Indonesia"
+                  class="text-xl font-bold"
+                >
+                  Progate Indonesia
+                </h3>
+
+                <p
+                  data-en="Freelance Coding Mentor · Jakarta, Indonesia"
+                  data-id="Mentor Coding Freelance · Jakarta, Indonesia"
+                  class="text-violet-400 text-sm mt-1"
+                >
+                  Freelance Coding Mentor · Jakarta, Indonesia
+                </p>
+
+              </div>
+
+              <span class="text-sm text-gray-500">
+                Sep 2021 – Aug 2022
+              </span>
+
+            </div>
+
+            <ul class="mt-5 space-y-2 text-gray-400 text-sm leading-relaxed">
+
+              <li
+                data-en="• Mentored 100+ students in HTML, CSS, JavaScript, SQL, and NodeJS, achieving a 90% course completion rate."
+                data-id="• Membimbing 100+ mahasiswa dalam HTML, CSS, JavaScript, SQL, dan NodeJS, dengan tingkat penyelesaian kursus sebesar 90%."
+              >
+                • Mentored 100+ students in HTML, CSS, JavaScript, SQL, and NodeJS, achieving a 90% course completion rate.
+              </li>
+
+              <li
+                data-en="• Created practical projects and curriculum modules, increasing student engagement by 40%."
+                data-id="• Membuat proyek praktis dan modul kurikulum yang meningkatkan keterlibatan peserta sebesar 40%."
+              >
+                • Created practical projects and curriculum modules, increasing student engagement by 40%.
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+
+        <!-- Eresto -->
+        <div class="relative pl-10 mb-12">
+
+          <div class="timeline-dot"></div>
+
+          <div class="glass rounded-2xl p-6">
+
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+
+              <div>
+
+                <h3
+                  data-en="PT Eresto Digital Indonesia"
+                  data-id="PT Eresto Digital Indonesia"
+                  class="text-xl font-bold"
+                >
+                  PT Eresto Digital Indonesia
+                </h3>
+
+                <p
+                  data-en="Backend Ruby Developer · Bandung, Indonesia"
+                  data-id="Backend Ruby Developer · Bandung, Indonesia"
+                  class="text-violet-400 text-sm mt-1"
+                >
+                  Backend Ruby Developer · Bandung, Indonesia
+                </p>
+
+              </div>
+
+              <span class="text-sm text-gray-500">
+                Apr 2021 – Jul 2021
+              </span>
+
+            </div>
+
+            <ul class="mt-5 space-y-2 text-gray-400 text-sm leading-relaxed">
+
+              <li
+                data-en="• Integrated CRM and financial reporting modules into eresto.id, improving decision-making speed by 35% and revenue tracking accuracy by 25%."
+                data-id="• Mengintegrasikan modul CRM dan laporan keuangan ke eresto.id, meningkatkan kecepatan pengambilan keputusan sebesar 35% dan akurasi pelacakan pendapatan sebesar 25%."
+              >
+                • Integrated CRM and financial reporting modules into eresto.id, improving decision-making speed by 35% and revenue tracking accuracy by 25%.
+              </li>
+
+              <li
+                data-en="• Engineered squids.id's reseller platform with drop-shipping capabilities, supporting 15,000+ monthly transactions and reducing storage-related delays by 20%."
+                data-id="• Mengembangkan platform reseller squids.id dengan fitur dropshipping, mendukung 15.000+ transaksi per bulan dan mengurangi keterlambatan terkait penyimpanan sebesar 20%."
+              >
+                • Engineered squids.id's reseller platform with drop-shipping capabilities, supporting 15,000+ monthly transactions and reducing storage-related delays by 20%.
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+
+        <!-- Walden -->
+        <div class="relative pl-10 mb-12">
+
+          <div class="timeline-dot"></div>
+
+          <div class="glass rounded-2xl p-6">
+
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+
+              <div>
+
+                <h3
+                  data-en="PT Walden Global Service"
+                  data-id="PT Walden Global Service"
+                  class="text-xl font-bold"
+                >
+                  PT Walden Global Service
+                </h3>
+
+                <p
+                  data-en="Fullstack Ruby on Rails Developer · Bandung, Indonesia"
+                  data-id="Fullstack Ruby on Rails Developer · Bandung, Indonesia"
+                  class="text-violet-400 text-sm mt-1"
+                >
+                  Fullstack Ruby on Rails Developer · Bandung, Indonesia
+                </p>
+
+              </div>
+
+              <span class="text-sm text-gray-500">
+                Dec 2019 – Mar 2021
+              </span>
+
+            </div>
+
+            <ul class="mt-5 space-y-2 text-gray-400 text-sm leading-relaxed">
+
+              <li
+                data-en="• Developed CRM and financial reporting systems for sales analytics and revenue tracking."
+                data-id="• Mengembangkan sistem CRM dan laporan keuangan untuk analitik penjualan dan pelacakan pendapatan."
+              >
+                • Developed CRM and financial reporting systems for sales analytics and revenue tracking.
+              </li>
+
+              <li
+                data-en="• Built squids.id's reseller platform, supporting 15,000+ monthly transactions."
+                data-id="• Membangun platform reseller squids.id yang mendukung 15.000+ transaksi per bulan."
+              >
+                • Built squids.id's reseller platform, supporting 15,000+ monthly transactions.
+              </li>
+
+              <li
+                data-en="• Developed Proline, improving production monitoring efficiency by 40%."
+                data-id="• Mengembangkan Proline yang meningkatkan efisiensi pemantauan produksi sebesar 40%."
+              >
+                • Developed Proline, improving production monitoring efficiency by 40%.
+              </li>
+
+              <li
+                data-en="• Built QC MAKLOON, reducing product defects by 30% through real-time quality checks."
+                data-id="• Membangun QC MAKLOON yang mengurangi cacat produk sebesar 30% melalui pemeriksaan kualitas secara real-time."
+              >
+                • Built QC MAKLOON, reducing product defects by 30% through real-time quality checks.
+              </li>
+
+              <li
+                data-en="• Automated data collection and reporting, improving issue detection speed by 50%."
+                data-id="• Mengotomatisasi pengumpulan data dan pelaporan, meningkatkan kecepatan deteksi masalah sebesar 50%."
+              >
+                • Automated data collection and reporting, improving issue detection speed by 50%.
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Education -->
+  <section id="education" class="px-6 py-24">
+
+    <div class="max-w-6xl mx-auto">
+
+      <p
+        data-en="EDUCATION"
+        data-id="PENDIDIKAN"
+        class="text-sm text-violet-400 font-semibold mb-3"
+      >
+        EDUCATION
+      </p>
+
+      <h2
+        data-en="Education"
+        data-id="Pendidikan"
+        class="text-3xl md:text-4xl font-bold mb-10"
+      >
+        Education
+      </h2>
+
+      <div class="glass rounded-2xl p-6 md:p-8">
+
+        <h3
+          data-en="University of Pasundan"
+          data-id="Universitas Pasundan"
+          class="text-xl font-bold"
+        >
+          University of Pasundan
+        </h3>
+
+        <p class="text-gray-400 mt-2">
+          Bandung, Indonesia
+        </p>
+
+        <a
+          href="https://pddikti.kemdiktisaintek.go.id/detail-mahasiswa/5O9OnidwCEYAARiryEJiUTEcSst0AfXuEKlGYFQLDesSpogTP9XKpB74-VI_r7lR6CaKsA=="
+          target="_blank"
+          data-en="View PDDIKTI"
+          data-id="Lihat PDDIKTI"
+          class="inline-block mt-5 text-sm text-violet-400 hover:text-violet-300"
+        >
+          View PDDIKTI
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Writing -->
+  <section id="creative" class="px-6 py-24">
+
+    <div class="max-w-6xl mx-auto">
+
+      <p
+        data-en="WRITING"
+        data-id="TULISAN"
+        class="text-sm text-violet-400 font-semibold mb-3"
+      >
+        WRITING
+      </p>
+
+      <h2
+        data-en="Writing & Thoughts"
+        data-id="Tulisan & Pemikiran"
+        class="text-3xl md:text-4xl font-bold mb-10"
+      >
+        Writing & Thoughts
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <a
+          href="https://github.com/jusondac"
+          target="_blank"
+          class="glass rounded-2xl p-6 hover:bg-white/10 transition"
+        >
+
+          <p
+            data-en="GitHub"
+            data-id="GitHub"
+            class="text-sm text-gray-500 mb-3"
+          >
+            GitHub
+          </p>
+
+          <h3
+            data-en="Projects & Code"
+            data-id="Proyek & Kode"
+            class="text-xl font-bold"
+          >
+            Projects & Code
+          </h3>
+
+          <p
+            data-en="Explore my projects, experiments, and development work."
+            data-id="Lihat proyek, eksperimen, dan pekerjaan pengembangan saya."
+            class="text-gray-400 text-sm mt-3"
+          >
+            Explore my projects, experiments, and development work.
+          </p>
+
+        </a>
+
+
+        <a
+          href="https://medium.com/@rejkamuhammad"
+          target="_blank"
+          class="glass rounded-2xl p-6 hover:bg-white/10 transition"
+        >
+
+          <p
+            data-en="Medium · @rejkamuhammad"
+            data-id="Medium · @rejkamuhammad"
+            class="text-sm text-gray-500 mb-3"
+          >
+            Medium · @rejkamuhammad
+          </p>
+
+          <h3
+            data-en="Tutorials & Ruby on Rails"
+            data-id="Tutorial & Ruby on Rails"
+            class="text-xl font-bold"
+          >
+            Tutorials & Ruby on Rails
+          </h3>
+
+          <p
+            data-en="Technical tutorials, programming notes, and development content."
+            data-id="Tutorial teknis, catatan pemrograman, dan konten pengembangan."
+            class="text-gray-400 text-sm mt-3"
+          >
+            Technical tutorials, programming notes, and development content.
+          </p>
+
+        </a>
+
+
+        <a
+          href="https://medium.com/@promedeuz"
+          target="_blank"
+          class="glass rounded-2xl p-6 hover:bg-white/10 transition"
+        >
+
+          <p
+            data-en="Medium · @promedeuz"
+            data-id="Medium · @promedeuz"
+            class="text-sm text-gray-500 mb-3"
+          >
+            Medium · @promedeuz
+          </p>
+
+          <h3
+            data-en="Writing & Thoughts"
+            data-id="Tulisan & Pemikiran"
+            class="text-xl font-bold"
+          >
+            Writing & Thoughts
+          </h3>
+
+          <p
+            data-en="Personal thoughts, ideas, reflections, and things I find interesting."
+            data-id="Pemikiran pribadi, ide, refleksi, dan hal-hal yang saya anggap menarik."
+            class="text-gray-400 text-sm mt-3"
+          >
+            Personal thoughts, ideas, reflections, and things I find interesting.
+          </p>
+
+        </a>
+
+      </div>
+
+
+      <div class="mt-5">
+
+        <a
+          href="https://open.spotify.com/show/6bQozw6844c3PZZJFNQqkm?si=4fi-h76mTAC3uJDU7yBmxg&utm_source=copy-link"
+          target="_blank"
+          class="glass rounded-2xl p-6 hover:bg-white/10 transition block"
+        >
+
+          <p
+            data-en="Spotify"
+            data-id="Spotify"
+            class="text-sm text-gray-500 mb-3"
+          >
+            Spotify
+          </p>
+
+          <h3
+            data-en="Podcast"
+            data-id="Podcast"
+            class="text-xl font-bold"
+          >
+            Podcast
+          </h3>
+
+          <p
+            data-en="Listen to my podcast and audio content."
+            data-id="Dengarkan podcast dan konten audio saya."
+            class="text-gray-400 text-sm mt-3"
+          >
+            Listen to my podcast and audio content.
+          </p>
+
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="px-6 py-24">
+
+    <div class="max-w-6xl mx-auto">
+
+      <div class="glass glow rounded-3xl p-8 md:p-12 text-center">
+
+        <p
+          data-en="CONTACT"
+          data-id="KONTAK"
+          class="text-sm text-violet-400 font-semibold mb-3"
+        >
+          CONTACT
+        </p>
+
+        <h2
+          data-en="Let's connect."
+          data-id="Mari terhubung."
+          class="text-3xl md:text-5xl font-bold"
+        >
+          Let's connect.
+        </h2>
+
+        <p
+          data-en="Have a project, opportunity, or simply want to talk?"
+          data-id="Punya proyek, kesempatan kerja, atau sekadar ingin berbicara?"
+          class="text-gray-400 mt-5"
+        >
+          Have a project, opportunity, or simply want to talk?
+        </p>
+
+        <div class="mt-8 flex flex-wrap justify-center gap-3">
+
+          <a
+            href="https://wa.me/6285111602709"
+            class="px-5 py-3 rounded-xl bg-white text-black font-semibold text-sm hover:bg-gray-200 transition"
+          >
+            WhatsApp
+          </a>
+
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=rejkamuhammad@gmail.com&su=Hello%20Muhammad%20Rejka%20Permana"
+            class="px-5 py-3 rounded-xl glass font-semibold text-sm hover:bg-white/10 transition"
+          >
+            Email
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="px-6 py-10 border-t border-white/10">
+
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row
+                justify-between items-center gap-4">
+
+      <p
+        data-en="© 2026 Muhammad Rejka Permana"
+        data-id="© 2026 Muhammad Rejka Permana"
+        class="text-sm text-gray-500"
+      >
+        © 2026 Muhammad Rejka Permana
+      </p>
+
+      <p
+        data-en="Built with HTML & Tailwind CSS"
+        data-id="Dibuat dengan HTML & Tailwind CSS"
+        class="text-sm text-gray-600"
+      >
+        Built with HTML & Tailwind CSS
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    const languageToggle =
+      document.getElementById("languageToggle");
+
+    let currentLanguage =
+      localStorage.getItem("portfolioLanguage") || "en";
+
+
+    function updateLanguage() {
+
+      document.querySelectorAll("[data-en]").forEach(element => {
+
+        element.textContent =
+          currentLanguage === "en"
+            ? element.getAttribute("data-en")
+            : element.getAttribute("data-id");
+
+      });
+
+
+      languageToggle.textContent =
+        currentLanguage === "en"
+          ? "ID"
+          : "ENG";
+
+
+      document.documentElement.lang =
+        currentLanguage === "en"
+          ? "en"
+          : "id";
+
+
+      localStorage.setItem(
+        "portfolioLanguage",
+        currentLanguage
+      );
+
+    }
+
+
+    languageToggle.addEventListener("click", () => {
+
+      currentLanguage =
+        currentLanguage === "en"
+          ? "id"
+          : "en";
+
+      updateLanguage();
+
+    });
+
+
+    updateLanguage();
+
+  </script>
+
+</body>
+</html>
